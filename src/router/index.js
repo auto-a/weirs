@@ -6,7 +6,9 @@ import left from '@/components/left'
 import jibenzl from '@/components/jibenzl'
 import WageN from '@/components/WageN'
 import WageMs from '@/components/WageMs'
+import shiyan from '@/components/shiyan'
 import zhujian from '@/components/zhujian'
+import jichu from '@/components/jichu'
 Vue.use(Router)
 
 export default new Router({
@@ -28,9 +30,9 @@ export default new Router({
           components:left,
           },
           {
-          path:'/components',
+          path:'/components/jibenzl',
           name:'jibenzl',
-          components:jibenzl,
+          components: () => import('@/components/left'),
           },
           {
           path:'/components',
@@ -46,6 +48,16 @@ export default new Router({
           path:'/components',
           name:'zhujian',
           components:zhujian,
+          },
+          {
+          path:'/components',
+          name:'shiyan',
+          components:shiyan,
+          },
+          {
+          path:'/components',
+          name:'jichu',
+          components:jichu,
           }
   ]
 })

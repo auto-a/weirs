@@ -3,21 +3,22 @@
     <div class="left">
    <el-col >
     <el-menu
-      default-active="2"
+      :default-active="$route.path"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
       background-color="#eeeeee"
       text-color="#000000"
       unique-opened="true"
+      router
       active-text-color="#000000">
-      <el-submenu index="1">
+      <el-submenu>
         <template slot="title">
           <i class="el-icon-user" style="color: #007AFF;"></i>
-          <span >员工资料</span>
+          <span>员工资料</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="1-1" style="color: #007AFF;" >基本资料</el-menu-item>
+          <el-menu-item index="/components/zhujian" style="color: #007AFF;" >基本资料</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
        <el-submenu index="2">
@@ -78,22 +79,9 @@
     </el-menu>
   </el-col>
   </div>
-
-      <div class="right">
-        <div v-show="flase">
-        <l-tjibenzl></l-tjibenzl>
-        </div>
-        <div v-show="flase">
-        <wage-n></wage-n>
-        </div>
-        <div v-show="flase">
-        <wage-ms></wage-ms>
-        </div>
-        <div v-show="true">
-        <zhujian></zhujian>
-        </div>
-      </div>
-  <RouterView></RouterView>
+ <el-main>
+    <jichu></jichu>
+   <RouterView class="right"/></el-main>
   </div>
 </template>
 
@@ -102,12 +90,16 @@
   import WageN from './WageN'
   import WageMs from './WageMs'
   import zhujian from './zhujian'
+  import shiyan from './shiyan'
+  import jichu from './jichu'
   export default {
     components:{
       LTjibenzl,
       WageN,
       WageMs,
       zhujian,
+      shiyan,
+      jichu,
     },
     data() {
       return{

@@ -9,10 +9,12 @@
 <script>
  import SYtop from './top'
  import SYleft from './left'
+ import shiyan from './shiyan'
      export default{
        components:{
          SYtop,
          SYleft,
+         shiyan,
        },
        data() {
          return{

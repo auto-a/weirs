@@ -15,9 +15,7 @@
         <el-table-column prop="address" label="所属部门" width="100">
         </el-table-column>
         <el-table-column label="所属部门" width="200">
-          <el-popover placement="top-start" title="标题" width="200" trigger="hover" content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-            <el-button slot="reference">hover 激活</el-button>
-          </el-popover>
+        <el-button style="height:16px; font-size:15px; color: #00F7DE; line-height:1px;">人事部工资账套</el-button>
         </el-table-column>
         <el-table-column fixed="right" label="操作" width="100">
           <template slot-scope="scope">
@@ -132,12 +130,7 @@
             address: '财务部',
             zip: 200333
           }
-        ],
-        gridData: [{
-          date1: '2016-05-02',
-          name1: '王小虎',
-          address1: '财务部'
-        }]
+        ]
       };
     },
     methods: {
