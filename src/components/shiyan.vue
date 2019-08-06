@@ -22,7 +22,7 @@
     </el-menu>
   </el-col>
 
-  <RouterView     class="menu-right"/>
+  <RouterView class="menu-right"/>
   </div>
 </template>
 <script>

@@ -7,7 +7,6 @@
   <el-tabs :tab-position="tabPosition" style="height: 600px;">
     <el-tab-pane label="用户管理">
     <div>
-     <l-tjibenzl></l-tjibenzl>
     </div>
     </el-tab-pane>
     <el-tab-pane label="配置管理">配置管理</el-tab-pane>
@@ -18,11 +17,7 @@
 </template>
 
 <script>
-  import LTjibenzl from './jibenzl'
   export default {
-    components:{
-      LTjibenzl,
-    },
     data() {
       return {
         tabPosition: 'left'
